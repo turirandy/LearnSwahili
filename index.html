@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LearnSwahili</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>LearnSwahili</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Swahili</a></li>
+                    <li><a href="basic.html">More Swahili</a></li>
+                    <li><a href="how.html">How to pronouciate</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search flashcards" />
+        </div>
+        <div id="flashcardContainer" class="flashcard-grid"></div>
+        <button id="addCardBtn" class="floating-btn">+</button>
+        
+        
+        <div id="addCardModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Add New Flashcard</h2>
+                <input type="text" id="newQuestion" placeholder="Enter question">
+                <input type="text" id="newAnswer" placeholder="Enter answer">
+
+                <button onclick="addFlashcard()">Add</button>
+                <button class="close-btn" onclick="closeAddModal()">Close</button>
+            </div>
+        </div>
+        
+        
+        <div id="focusModal" class="modal hidden">
+            <div class="modal-content large">
+                <button class="close-btn" onclick="closeFocus()">x</button>
+                <div class="flashcard large" id="focusedCard" onclick="flipFocusedCard()">
+                    <div class="flashcard-inner">
+                        <div class="front" id="focusFront"></div>
+                        <div class="back" id="focusBack"></div>
+                    </div>
+                </div>
+                <div id="focusMeaning" class="meaning-text"></div>
+
+                <div class="nav-buttons">
+                    <button id="prevBtn" onclick="prevCard()">Prev</button>
+                    <button id="nextBtn" onclick="nextCard()">Next</button>
+                </div>
+                <button onclick="deleteCurrent()">Delete</button>
+            </div>
+        </div>
+         <footer>LearnSwahili by Randy:heart|| &copy LearnSwahili 2025</footer>
+    <script src="main.js"></script>
+</body>
+</html>

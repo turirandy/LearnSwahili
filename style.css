@@ -1,0 +1,183 @@
+:root {
+    --bg: #ffffff;
+    --text: #111;
+    --card: #f9f9f9;
+    --text:#222;
+    --accent:#4a90e2;
+    --card:#ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecbe99;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    box-shadow:2px 8px var(--shadow);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.search-bar {
+    padding: 1rem;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 60%;
+    max-width: 400px;
+}
+
+.flashcard-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.flashcard {
+    background-color: var(--card);
+    border-radius: 11px;
+    height: 180px;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.flashcard:hover {
+    transform: scale(1.03);
+
+}
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 11px;
+}
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+.flashcard .front,
+.flashcard .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+.flashcard .front {
+    background-color: var(--card);
+    font-weight: bold;
+
+}
+.flashcard .back {
+    background-color: #ffecb3;
+    transform: rotateY(180deg);
+}
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: lightcoral;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+.floating-btn {
+    background: #4a90e2;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    bottom: 30px;
+    position: fixed;
+    right: 30px;
+    padding: 0.75rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+.modal.hidden {
+    display: none;
+
+}
+.modal-content {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    width: 91%;
+    text-align: center;
+    max-width: 400px;
+}
+
+.large {
+    height: 250px;
+    margin: 1rem 0;
+}
+
+.close-btn {
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    background: goldenrod;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
+}
+footer{
+    background-color: #4a90e2;
+    font-family: cursive;
+}
+

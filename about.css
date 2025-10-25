@@ -1,0 +1,81 @@
+:root{
+    --bg:#fff8ee;
+    --text:#222;
+    --accent:#4a90e2;
+    --card:#ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+header{
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    box-shadow:2px 8px var(--shadow);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+section h1 {
+    text-align: left;
+    color: var(--accent);
+    font-size: 20px;
+    margin-bottom: 1rem;
+    margin: 20px;
+}
+section p{
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    display: inline;
+    margin: 10px;
+}
+p{
+    margin: 10px;
+}
+ol{
+    background: var(--card);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px var(--shadow);
+}
+ol li{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    width: 100;
+    display: inline;
+}
+ol li p{
+    margin: 0.3rem 0 1rem 0.5rem;
+    font-weight: normal;
+    display: flex;
+}
+#faq h3 {
+    color: var(--accent);
+    margin-top: 2rem;
+    margin: 10px;
+}
+footer{
+    background-color: #4a90e2;
+    font-family: cursive;
+}
